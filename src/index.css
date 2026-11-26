@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #0B1020;
+  --color-navy-900: #111827;
+  --color-navy-800: #172033;
+  --color-navy-700: #1F2B44;
+  --color-gold-400: #D5BD88;
+  --color-gold-500: #C6A96B;
+  --color-gold-600: #A88B4D;
+  --color-sage-400: #B9CEB5;
+  --color-sage-500: #A7BFA3;
+  --color-ivory-100: #F5F1E8;
+  --color-ivory-200: #E8E1D3;
+  --color-slate-muted: #A5ADBC;
+}
+
+@layer base {
+  html {
+    background-color: #0B1020;
+    color: #F5F1E8;
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars matching midnight navy aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1020;
+}
+::-webkit-scrollbar-thumb {
+  background: #24314D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #33456B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #111827 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-document {
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Book Rating Analysis",
+  "description": "Data Science Mini Project by Sarvagya Jain (ID: 122042, Section B2, 2026) for analyzing real-world book ratings, genre and publication-year patterns, Bayesian confidence-aware recommendations, and academic reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
